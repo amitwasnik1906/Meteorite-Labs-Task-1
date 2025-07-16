@@ -1,5 +1,5 @@
 import React from 'react';
-import { Instagram, Globe, AtSign, MessageCircle, Video } from 'lucide-react';
+import { Instagram, Globe, AtSign, Video } from 'lucide-react';
 
 interface ProfileProps {
     name: string;
