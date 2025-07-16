@@ -64,12 +64,9 @@ const RecommendationGrid: React.FC = () => {
   ];
 
   return (
-    <div className="max-w-7xl mx-auto px-4 py-12">
+    <div className="max-w-7xl py-3 mx-auto px-4 md:py-12">
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-8 gap-4">
-        <h2 className="text-3xl font-bold text-gray-900 text-left">You may also like</h2>
-        <button className="p-2 hover:bg-gray-100 rounded-full self-start sm:self-auto">
-          <ChevronRight className="w-6 h-6 text-gray-600" />
-        </button>
+        <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 text-left">You may also like</h2>
       </div>
 
       <div className="flex justify-center">

@@ -29,11 +29,11 @@ const FAQ: React.FC<FAQProps> = ({
   };
 
   return (
-    <div className="max-w-6xl mx-auto py-16">
-      <div className="flex gap-12">
+    <div className="max-w-6xl mx-auto py-10 px-4 sm:py-12 md:py-16">
+      <div className="flex flex-col md:flex-row gap-8 md:gap-12">
         {/* Left Title Section */}
-        <div className="w-80 flex-shrink-0">
-          <h2 className="text-4xl font-bold text-gray-900 leading-tight">
+        <div className="w-full md:w-80 flex-shrink-0 mb-8 md:mb-0">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 leading-tight">
             {title}
             <br />
             {subtitle}
@@ -47,23 +47,23 @@ const FAQ: React.FC<FAQProps> = ({
               <div key={item.id} className="border-b border-gray-200 pb-6">
                 <button
                   onClick={() => toggleItem(item.id)}
-                  className="w-full flex items-center justify-between text-left group"
+                  className="w-full flex items-center justify-between text-left group focus:outline-none"
                 >
-                  <h3 className="text-gray-900 text-lg pr-4 group-hover:text-gray-700 transition-colors">
+                  <h3 className="text-gray-900 text-base sm:text-lg pr-2 sm:pr-4 group-hover:text-gray-700 transition-colors">
                     {item.question}
                   </h3>
                   <div className="flex-shrink-0">
                     {openItems.includes(item.id) ? (
-                      <ChevronUp className="w-6 h-6 text-gray-500" />
+                      <ChevronUp className="w-5 h-5 sm:w-6 sm:h-6 text-gray-500" />
                     ) : (
-                      <ChevronDown className="w-6 h-6 text-gray-500" />
+                      <ChevronDown className="w-5 h-5 sm:w-6 sm:h-6 text-gray-500" />
                     )}
                   </div>
                 </button>
                 
                 {openItems.includes(item.id) && (
-                  <div className="mt-4 pr-10">
-                    <p className="text-gray-600 leading-relaxed">
+                  <div className="mt-4 pr-2 sm:pr-10">
+                    <p className="text-gray-600 leading-relaxed text-sm sm:text-base">
                       {item.answer}
                     </p>
                   </div>
