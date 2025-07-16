@@ -23,7 +23,6 @@ const Profile: React.FC<ProfileProps> = ({
     bio,
     profileImage,
     countries,
-    socialLinks = {}
 }) => {
     const handleMessage = () => {
         // Handle message functionality

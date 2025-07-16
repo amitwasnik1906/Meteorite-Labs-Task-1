@@ -59,7 +59,7 @@ const imageCards: ImageCard[] = [
 ];
 
 // Image Card Component
-const ImageCard: React.FC<{ card: ImageCard; location: Location }> = ({ card, location }) => {
+const ImageCard: React.FC<{ card: ImageCard; location: Location }> = ({ card }) => {
   return (
     <div className="flex-shrink-0 w-40 h-[222px] p-1 bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow flex flex-col">
       <div className="w-full h-[180px] rounded-md overflow-hidden">
@@ -86,6 +86,7 @@ const MapPage: React.FC = () => {
 
   const handleMarkerClick = (location: Location) => {
     setSelectedLocation(location);
+    console.log(selectedLocation);
   };
 
   // Load Leaflet CSS and JS

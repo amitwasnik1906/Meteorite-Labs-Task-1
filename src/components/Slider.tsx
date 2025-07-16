@@ -59,7 +59,7 @@ const Slider: React.FC<SliderProps> = ({ images, visibleCount = 3 }) => {
         </button>
 
         <div className="flex gap-4 justify-center items-center">
-          {visibleImages.map((img, idx) => (
+          {visibleImages.map((img) => (
             <div
               key={img.id}
               className=""
@@ -116,7 +116,7 @@ const Slider: React.FC<SliderProps> = ({ images, visibleCount = 3 }) => {
       {/* Mobile View */}
       <div className="md:hidden relative w-full">
         <div className="flex gap-4 overflow-x-auto scrollbar-hide px-4 py-2">
-          {images.map((img, idx) => (
+          {images.map((img) => (
             <div
               key={img.id}
               className="flex-shrink-0"

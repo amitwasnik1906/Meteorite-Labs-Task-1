@@ -1,4 +1,3 @@
-import React from 'react'
 import Hero from '../components/Hero'
 import TravelPlannerSection from '../components/TravelPlannerSection'
 import InteractiveMap from '../components/InteractiveMap'

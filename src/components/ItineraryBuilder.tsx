@@ -1,13 +1,7 @@
 import React from 'react';
-import { Plus, MoreHorizontal } from 'lucide-react';
 
 const ItineraryBuilder: React.FC = () => {
-  const days = [
-    { date: 'Tue 11 apr', activities: ['Hot Spring', 'Text', 'Photospot'] },
-    { date: 'Wed 12 apr', activities: ['Hike', 'Text', 'Sightseeing', 'Text', 'Stay'] },
-    { date: 'Thu 13 apr', activities: ['Waterfall'] }
-  ];
-
+  
   return (
     <div className="max-w-7xl mx-auto py-8 px-4 sm:py-10 md:py-14">
       <div className="grid grid-cols-1 lg:grid-cols-9 gap-6 sm:gap-8 lg:gap-10 bg-white">

@@ -1,5 +1,5 @@
 import React from 'react';
-import { ChevronRight, Eye, Mountain } from 'lucide-react';
+import { Eye, Mountain } from 'lucide-react';
 import Slider from './Slider';
 
 interface RecommendationCard {
