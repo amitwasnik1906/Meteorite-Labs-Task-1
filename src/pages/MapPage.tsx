@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import LeafletMap from '../components/LeafletMap';
-// import { MapPin, Lock, Filter, User, ChevronLeft, ChevronRight } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 // Types
 interface Location {
@@ -77,16 +77,15 @@ const ImageCard: React.FC<{ card: ImageCard; location: Location }> = ({ card, lo
 };
 
 // Main Component
-const NordicTravelMap: React.FC = () => {
+const MapPage: React.FC = () => {
   const [selectedLocation, setSelectedLocation] = useState<Location | null>(null);
-  
+
   const [isMapLoaded, setIsMapLoaded] = useState(false);
   const scrollContainerRef = useRef<HTMLDivElement>(null);
+  const navigate = useNavigate();
 
   const handleMarkerClick = (location: Location) => {
     setSelectedLocation(location);
-    console.log(location);
-    
   };
 
   // Load Leaflet CSS and JS
@@ -116,9 +115,18 @@ const NordicTravelMap: React.FC = () => {
 
   return (
     <div className="w-screen h-screen min-h-screen min-w-full flex flex-col relative">
+      <button
+        className="absolute top-6 left-12 z-30 w-10 h-10 rounded-full bg-white shadow-lg flex items-center justify-center text-2xl font-bold text-gray-700 hover:bg-gray-100 transition-colors border border-gray-200"
+        onClick={() => navigate('/')}
+        aria-label="Go Home"
+      >
+        <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+        </svg>
+      </button>
+
       {/* Header */}
       <div className="mb-6 flex-1 flex flex-col">
-        
         {/* Map */}
         <div className="flex-1 flex flex-col">
           {isMapLoaded ? (
@@ -152,4 +160,4 @@ const NordicTravelMap: React.FC = () => {
   );
 };
 
-export default NordicTravelMap;
+export default MapPage;
